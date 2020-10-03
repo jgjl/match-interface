@@ -47,7 +47,7 @@ AS_IF([test "$HAVE_IESAPI" == 0 && test "x$IESLIBS" == "x"],
 AM_CONDITIONAL([FMIESINCS], [test "x$IESINCS" != x])
 AM_CONDITIONAL([FMIESLIBS], [test "x$IESLIBS" != x])
 
-CFLAGS="$CFLAGS -Wl,--no-as-needed"
+CFLAGS="$CFLAGS -Wl,--no-as-needed -Wno-stringop-truncation"
 
 AC_ARG_ENABLE(
     [systemd],
